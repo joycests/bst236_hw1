@@ -13,8 +13,6 @@ Use the link below to preview the live site:
 
 > https://joycests.github.io/bst236_hw1/
 
-*(Replace `joycests` with your own GitHub user if you fork or clone.)*
-
 ---
 
 ## Quick links
@@ -54,10 +52,6 @@ bootstrap the HTML and CSS.  My workflow looked like this:
    *I got the one‑liner script.*
 3. I asked follow‑ups for styling hints (e.g. flexbox grid, color scheme) and
    copied the resulting CSS into `assets/style.css`.
-
-Screenshots of the code suggestions are in the `/screenshots` folder in my
-local copy (not committed here) and I also recorded a short screencast of the
-conversation; the link is included below.
 
 > **AI tools used:** ChatGPT / GitHub Copilot inside VS Code.
 
@@ -106,9 +100,6 @@ change, refresh the page, then ask Copilot why something isn't working.  The
 agent occasionally hallucinated nonexistent variables, so I had to correct a
 few lines manually, which was a good reminder to review generated code.
 
-Screenshots of the Copilot prompts and the resulting code appear in the
-project notes (see `/notes/pacman/`).
-
 > **AI tools used:** GitHub Copilot / ChatGPT, Copilot CLI for batch generation.
 
 > **Prompt design:** Break down the game features into small tasks and ask for
@@ -137,8 +128,6 @@ Key components:
 * **Styling** in `arxiv/arxiv.css` produces a dark‑mode card layout.
 * **`papers.json`** – sample output already committed.  The workflow updates
   this file automatically.
-* **GitHub Action** – uses `actions/setup-python` and pip installs `feedparser`.
-  After running the script, it commits `arxiv/papers.json` if it changed.
 
 ### Copilot CLI & agentic workflow
 
@@ -162,10 +151,6 @@ workflow. Outline the files and commands needed.
    to test locally before committing.
 4. Finally, I added the workflow YAML and used `copilot run` to simulate the
    nightly job; the agent committed the updated `papers.json` for me.
-
-The full Copilot CLI conversation is saved in `.github/copilot/...` (not
-checked in for privacy) and includes the prompts above along with follow‑ups.  I
-also recorded the session with a screen recorder and linked it below.
 
 > **AI tools used:** Copilot CLI (planning + code generation), ChatGPT for API
 > research.
