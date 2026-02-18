@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Joyce’s Coding Blog</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="wrap">
+    <h1>Joyce’s Coding Blog</h1>
+    <p class="sub">Vibe coding • AI tooling • Experiments • Notes</p>
+    <nav class="nav">
+      <a href="./pacman/">💘 Valentine Pac-Man</a>
+      <a href="./arxiv/">🧠 arXiv Feed</a>
+      <a href="https://github.com/joycests/bst236_hw1" target="_blank" rel="noreferrer">Repo</a>
+    </nav>
+  </header>
+
+  <main class="wrap grid">
+    <section class="card">
+      <h2>About</h2>
+      <p>
+        This site hosts my coding blog projects for Homework 1: Code with AI.
+        It’s designed to be expandable for future assignments.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Projects</h2>
+      <ul>
+        <li><a href="./pacman/">Valentine Pac-Man game</a> (play in browser)</li>
+        <li><a href="./arxiv/">Auto-updating arXiv paper feed</a> (updates nightly)</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Next</h2>
+      <p>Add new posts as folders or markdown-to-HTML pages later. Keep nav links up top.</p>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <small>© <span id="y"></span> Joyce Song</small>
+  </footer>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

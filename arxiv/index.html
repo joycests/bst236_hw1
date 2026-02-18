@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Latest arXiv Papers</title>
+  <link rel="stylesheet" href="./arxiv.css"/>
+</head>
+<body>
+  <header class="top">
+    <a class="back" href="../">← Home</a>
+    <h1>Latest arXiv Papers</h1>
+    <p class="sub" id="meta">Loading…</p>
+  </header>
+
+  <main class="wrap">
+    <div id="list" class="list"></div>
+  </main>
+
+  <script>
+    async function main(){
+      const res = await fetch("./papers.json?cachebust=" + Date.now());
+      const data = await res.json();
+      document.getElementById("meta").textContent =
+        `Query: ${data.query} • Updated: ${data.updated_at} • Showing: ${data.papers.length}`;
+
+      const root = document.getElementById("list");
+      root.innerHTML = "";
+      for(const p of data.papers){
+        const el = document.createElement("article");
+        el.className = "card";
+        el.innerHTML = `
+          <h2 class="title">${p.title}</h2>
+          <div class="authors">${p.authors.join(", ")}</div>
+          <div class="links">
+            <a href="${p.abs_url || '#'}" target="_blank" rel="noreferrer">Abstract</a>
+            <a href="${p.pdf_url || p.pdf || '#'}" target="_blank" rel="noreferrer">PDF</a>
+            <span class="date">${p.published || 'N/A'}</span>
+          </div>
+          <p class="abstract">${p.abstract}</p>
+        `;
+        root.appendChild(el);
+      }
+    }
+    main().catch(err=>{
+      document.getElementById("meta").textContent = "Failed to load papers.json";
+      console.error(err);
+    });
+  </script>
+</body>
+</html>
