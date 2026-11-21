@@ -1,6 +1,6 @@
 {
   "query": "machine learning",
-  "updated_at": "2026-11-20T09:28:49.405989",
+  "updated_at": "2026-11-21T08:59:36.044487",
   "papers": [
     {
       "title": "Posterior Matching Distillation",
@@ -797,8 +797,8 @@
       "title": "Statistical Inference with Ill-Conditioned Random Weight Neural Network Sieves",
       "authors": [
         "Giovanni Ballarin",
-        "Lyudmila Grigoryeva",
-        "Lukas Gonon"
+        "Lukas Gonon",
+        "Lyudmila Grigoryeva"
       ],
       "abstract": "Random weight neural networks (RWNNs) are shallow networks whose hidden-layer parameters are randomly generated and then kept fixed, while only the output coefficients are estimated. Conditional on the sampled parameters, RWNN regression is a linear sieve problem with random approximation space. We show that such random sieves cannot remain uniformly well-conditioned as their dimension grows. For parametrized feature families satisfying polynomial covering and Lipschitz conditions, the eigenvalues of the population covariance matrix are proven to have polynomial upper bounds determined by the covering geometry of the parameter space, leading to a vanishing smallest eigenvalue. We develop approximation, estimation, and inference theory that explicitly treats the ill-conditioning. Under a $\u03b2$-H\u00f6lder source condition, we obtain both faster-than-Monte-Carlo $L^2$ approximation rates and new $L^\\infty$ approximation bounds based on stratified sampling. We then derive improved consistency guarantees for ridge-regularized least squares driven by ridge effective dimension, spectral, and leverage-based stability conditions. For inference, we establish asymptotic linearity and Gaussian limits for linear functional directions while allowing the smallest eigenvalue of the population covariance matrix to vanish. Nondegeneracy is directional: we characterize it with a ridge-normalized Rayleigh quotient and extend it to smooth functionals via Riesz representation. Consistency of ridge-adjusted variance estimators is proved, yielding feasible studentized inference. Numerical experiments illustrate the deterioration of random-feature conditioning and the finite-sample behavior of the resulting estimation and inference procedures.",
       "pdf": "https://arxiv.org/pdf/2611.26410v1",
